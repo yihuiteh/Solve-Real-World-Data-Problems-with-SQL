@@ -1,4 +1,5 @@
--- SQL request(s)​​​​​​‌​‌​​‌​‌‌​‌​​‌​‌​‌‌‌‌‌​‌​ below
+-- Business problem
+-- Exploring variable distributions with CTEs
 WITH clicks_per_user AS (
     SELECT USERID, COUNT(EVENTID) AS num_link_clicks
     FROM FrontendEventLog
