@@ -4,7 +4,7 @@ SELECT CustomerID, COUNT(ProductID) AS num_products, SUM(NumberOfUsers) AS total
 CASE WHEN (SUM(NumberOfUsers) >= 5000 OR COUNT(ProductID) = 1) THEN 1 ELSE 0 END AS upsell_opportunity
 FROM Subscriptions
 GROUP BY CustomerID
-
+-- Customer with only one product subscription and customers with at least 5000 total users
 -- Cannot use the column aliases directly in the CASE statement within the same SELECT clause. This is because the logical processing order of SQL does not allow you to reference the column aliases in the same SELECT clause.
 --Correct output
 15 rows
