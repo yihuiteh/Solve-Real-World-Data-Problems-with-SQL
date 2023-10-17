@@ -5,6 +5,7 @@ CASE WHEN (SUM(NumberOfUsers) >= 5000 OR COUNT(ProductID) = 1) THEN 1 ELSE 0 END
 FROM Subscriptions
 GROUP BY CustomerID
 
+-- Cannot use the column aliases directly in the CASE statement within the same SELECT clause. This is because the logical processing order of SQL does not allow you to reference the column aliases in the same SELECT clause.
 --Correct output
 15 rows
 ----------------------------------------------------------------
